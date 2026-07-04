@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Personal website of Matúš Adamkovič, researcher in methodology of behavioral research, meta-science, measurement, and research credibility."
+      content="Personal website of Matúš Adamkovič, researcher in research credibility, meta-science, measurement, and network approaches to psychological phenomena."
     >
     <title>Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
@@ -16,7 +16,8 @@
       <a class="wordmark" href="#top" data-field="name">Matúš Adamkovič</a>
       <nav aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="publications.html">Publications</a>
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -35,15 +36,12 @@
         </figure>
       </section>
 
-      <section class="stats" aria-label="Research profile highlights" data-stats></section>
-
       <section class="section-grid" id="research" aria-labelledby="research-title">
         <div>
           <p class="section-label">Research</p>
-          <h2 id="research-title">Interests</h2>
+          <h2 id="research-title">Research interests</h2>
         </div>
         <div class="text-block">
-          <p data-field="researchIntro"></p>
           <ul class="tag-list" data-research-areas></ul>
         </div>
       </section>
@@ -53,7 +51,24 @@
           <p class="section-label">Appointments</p>
           <h2 id="appointments-title">Current work</h2>
         </div>
-        <div class="timeline" data-appointments></div>
+        <div class="split-timelines">
+          <section aria-labelledby="research-work-title">
+            <h3 id="research-work-title">Research</h3>
+            <div class="timeline" data-research-appointments></div>
+          </section>
+          <section aria-labelledby="teaching-work-title">
+            <h3 id="teaching-work-title">Teaching</h3>
+            <div class="timeline" data-teaching-appointments></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-grid" id="projects" aria-labelledby="projects-title">
+        <div>
+          <p class="section-label">Projects</p>
+          <h2 id="projects-title">Selected current projects</h2>
+        </div>
+        <div class="publication-list" data-projects></div>
       </section>
 
       <section class="section-grid" id="publications" aria-labelledby="publications-title">
@@ -61,7 +76,20 @@
           <p class="section-label">Selected work</p>
           <h2 id="publications-title">Recent publications</h2>
         </div>
-        <div class="publication-list" data-publications></div>
+        <div>
+          <div class="publication-list" data-publications></div>
+          <p class="section-link"><a href="publications.html">All selected publications</a></p>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="score-title">
+        <div>
+          <p class="section-label">Collaboration</p>
+          <h2 id="score-title">SCORE project</h2>
+        </div>
+        <div class="text-block">
+          <p data-field="score"></p>
+        </div>
       </section>
 
       <section class="section-grid" id="cv" aria-labelledby="cv-title">
