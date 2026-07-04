@@ -1,34 +1,37 @@
 # Matúš Adamkovič personal website
 
-This is a simple static personal website designed for GitHub Pages.
+A simple static personal website designed for GitHub Pages.
+
+## Pages
+
+- `index.html` — overview: bio, research work, interests, selected projects and publications
+- `research.html` — CV download page (serves `assets/adamkovic_academic_cv.pdf`)
+- `projects.html` — projects and grants (ongoing / finished)
+- `publications.html` — full publication list with a year table of contents
+- `contact.html` — email and profile links
 
 ## Edit the site text
 
-Most editable text lives in `content/site-content.js`.
+All editable text lives in `content/site-content.js`. The HTML pages are only
+layout shells; `script.js` fills them from that file.
 
-Update that file to change:
+Things worth knowing:
 
-- name, role, and biography
-- research areas
-- appointments
-- projects
-- publications
-- contact links
-- homepage buttons
+- **Publications** get a `Paper` link automatically from the DOI in the citation
+  text. Every item has empty `paperUrl` and `materialsUrl` placeholders: fill in
+  `paperUrl` to override the automatic link, and `materialsUrl` to show a
+  `Data/materials` link. Mark an item with `"selected": true` to feature it on
+  the homepage.
+- **Projects** use a `status` field (`ongoing` or `finished`) to pick their
+  section and a `"selected": true` flag for the homepage. Each item has an empty
+  `description` placeholder for a manual write-up; any label containing
+  "Principal investigator" gets a PI badge.
+- **CV**: replace `assets/adamkovic_academic_cv.pdf` (or change `cvFile` in
+  `content/site-content.js`) to update the downloadable CV.
 
-Publication items include `paperUrl` and `materialsUrl` fields. Leave them blank
-to show no links, or paste a URL to show `Paper` and `Data/materials` links.
+## Update the portrait
 
-Project items include a `status` field. Use `ongoing` or `finished` to decide
-which Projects section the item appears in.
-
-## Update the portrait or CV
-
-- Replace `assets/profile.png` to change the homepage photo.
-- Edit the Research page content in `content/site-content.js` to update public CV information.
-
-The original CV document included private information, so this repository uses a
-public-safe Research page rather than publishing the source CV file directly.
+Replace `assets/profile.png` to change the homepage photo.
 
 ## Publish on GitHub Pages
 

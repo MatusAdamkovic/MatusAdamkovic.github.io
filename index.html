@@ -16,7 +16,7 @@
       <a class="wordmark" href="index.html" data-field="name">Matúš Adamkovič</a>
       <nav aria-label="Main navigation">
         <a href="index.html" aria-current="page">Overview</a>
-        <a href="research.html">Research</a>
+        <a href="research.html">CV</a>
         <a href="projects.html">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="contact.html">Contact</a>
@@ -26,7 +26,7 @@
     <main>
       <section class="intro" aria-labelledby="intro-title">
         <div class="intro-copy">
-          <p class="kicker" data-field="role">Researcher · Meta-science · Measurement</p>
+          <p class="kicker" data-field="role">Meta-science · Research credibility · Measurement</p>
           <h1 id="intro-title" data-field="name">Matúš Adamkovič</h1>
           <p class="lead" data-field="bio"></p>
           <div class="actions" data-profile-links></div>
@@ -39,17 +39,24 @@
       <section class="section-grid" aria-labelledby="overview-title">
         <div>
           <p class="section-label">Overview</p>
-          <h2 id="overview-title" data-field="overviewTitle">Overview & research</h2>
+          <h2 id="overview-title" data-field="overviewTitle">Research work</h2>
+        </div>
+        <div class="list" data-overview-positions></div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="interests-title">
+        <div>
+          <p class="section-label">Overview</p>
+          <h2 id="interests-title">Research interests</h2>
         </div>
         <div class="text-block">
-          <p data-field="overviewIntro"></p>
-          <ul class="plain-list" data-overview-highlights></ul>
+          <ul class="tag-list" data-research-areas></ul>
         </div>
       </section>
 
       <section class="section-grid" aria-labelledby="overview-projects-title">
         <div>
-          <p class="section-label">Overview</p>
+          <p class="section-label">Projects</p>
           <h2 id="overview-projects-title">Selected projects</h2>
         </div>
         <div>
@@ -60,11 +67,10 @@
 
       <section class="section-grid" aria-labelledby="overview-publications-title">
         <div>
-          <p class="section-label">Overview</p>
+          <p class="section-label">Publications</p>
           <h2 id="overview-publications-title">Selected publications</h2>
         </div>
         <div>
-          <p class="text-block" data-field="score"></p>
           <div class="list" data-overview-publications></div>
           <p class="section-link"><a href="publications.html">All publications</a></p>
         </div>
