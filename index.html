@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal website of Matúš Adamkovič, researcher in methodology of behavioral research, meta-science, measurement, and research credibility."
+    >
+    <title>Matúš Adamkovič</title>
+    <link rel="icon" href="assets/profile.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" data-field="name">Matúš Adamkovič</a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="kicker" data-field="role">Researcher · Meta-science · Methodology</p>
+          <h1 id="intro-title" data-field="name">Matúš Adamkovič</h1>
+          <p class="lead" data-field="bio"></p>
+          <div class="actions" data-links></div>
+        </div>
+        <figure class="portrait">
+          <img src="assets/profile.png" alt="Portrait of Matúš Adamkovič">
+        </figure>
+      </section>
+
+      <section class="stats" aria-label="Research profile highlights" data-stats></section>
+
+      <section class="section-grid" id="research" aria-labelledby="research-title">
+        <div>
+          <p class="section-label">Research</p>
+          <h2 id="research-title">Interests</h2>
+        </div>
+        <div class="text-block">
+          <p data-field="researchIntro"></p>
+          <ul class="tag-list" data-research-areas></ul>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="appointments-title">
+        <div>
+          <p class="section-label">Appointments</p>
+          <h2 id="appointments-title">Current work</h2>
+        </div>
+        <div class="timeline" data-appointments></div>
+      </section>
+
+      <section class="section-grid" id="publications" aria-labelledby="publications-title">
+        <div>
+          <p class="section-label">Selected work</p>
+          <h2 id="publications-title">Recent publications</h2>
+        </div>
+        <div class="publication-list" data-publications></div>
+      </section>
+
+      <section class="section-grid" id="cv" aria-labelledby="cv-title">
+        <div>
+          <p class="section-label">CV</p>
+          <h2 id="cv-title">Full record</h2>
+        </div>
+        <div class="text-block">
+          <p data-field="cvText"></p>
+          <a class="button" href="cv.html">View public CV</a>
+        </div>
+      </section>
+
+      <section class="section-grid contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2 id="contact-title">Get in touch</h2>
+        </div>
+        <div class="contact-links" data-contact></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-footer></span>
+    </footer>
+
+    <script src="content/site-content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
