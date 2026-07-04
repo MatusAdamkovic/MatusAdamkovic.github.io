@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Research profile and public CV information for Matúš Adamkovič.">
+    <title>Research · Matúš Adamkovič</title>
+    <link rel="icon" href="assets/profile.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="research">
+    <header class="site-header">
+      <a class="wordmark" href="index.html">Matúš Adamkovič</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Overview</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="kicker">Research</p>
+        <h1>Research profile</h1>
+        <p class="lead" data-field="bio"></p>
+        <div class="actions" data-profile-links></div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="interests-title">
+        <div>
+          <p class="section-label">Research</p>
+          <h2 id="interests-title">Research interests</h2>
+        </div>
+        <div class="text-block">
+          <ul class="tag-list" data-research-areas></ul>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="appointments-title">
+        <div>
+          <p class="section-label">Appointments</p>
+          <h2 id="appointments-title">Current work</h2>
+        </div>
+        <div class="split-timelines">
+          <section aria-labelledby="research-work-title">
+            <h3 id="research-work-title">Research</h3>
+            <div class="timeline" data-research-appointments></div>
+          </section>
+          <section aria-labelledby="teaching-work-title">
+            <h3 id="teaching-work-title">Teaching</h3>
+            <div class="timeline" data-teaching-appointments></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="education-title">
+        <div>
+          <p class="section-label">Public CV</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <div class="timeline" data-education></div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="teaching-title">
+        <div>
+          <p class="section-label">Public CV</p>
+          <h2 id="teaching-title">Teaching</h2>
+        </div>
+        <div class="text-block">
+          <ul class="plain-list" data-teaching></ul>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="service-title">
+        <div>
+          <p class="section-label">Public CV</p>
+          <h2 id="service-title">Service</h2>
+        </div>
+        <div class="text-block">
+          <ul class="plain-list" data-service></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-footer></span>
+    </footer>
+
+    <script src="content/site-content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

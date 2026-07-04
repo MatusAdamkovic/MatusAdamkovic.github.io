@@ -11,18 +11,24 @@ Update that file to change:
 - name, role, and biography
 - research areas
 - appointments
-- selected publications
+- projects
+- publications
 - contact links
 - homepage buttons
-- research stats
+
+Publication items include `paperUrl` and `materialsUrl` fields. Leave them blank
+to show no links, or paste a URL to show `Paper` and `Data/materials` links.
+
+Project items include a `status` field. Use `ongoing` or `finished` to decide
+which Projects section the item appears in.
 
 ## Update the portrait or CV
 
 - Replace `assets/profile.png` to change the homepage photo.
-- Edit `cv.html` to update the public CV page.
+- Edit the Research page content in `content/site-content.js` to update public CV information.
 
 The original CV document included private information, so this repository uses a
-public-safe CV page rather than publishing the source CV file directly.
+public-safe Research page rather than publishing the source CV file directly.
 
 ## Publish on GitHub Pages
 
