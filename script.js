@@ -71,8 +71,12 @@ const renderProjects = (selector, items) => {
 
 const publicationLinks = (item) => {
   const links = [
-    item.paperUrl ? `<a href="${escapeHtml(item.paperUrl)}" target="_blank" rel="noreferrer">Paper</a>` : "",
-    item.materialsUrl ? `<a href="${escapeHtml(item.materialsUrl)}" target="_blank" rel="noreferrer">Data/materials</a>` : ""
+    item.paperUrl
+      ? `<a href="${escapeHtml(item.paperUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.paperLabel || "Paper")}</a>`
+      : "",
+    item.materialsUrl
+      ? `<a href="${escapeHtml(item.materialsUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.materialsLabel || "Data/materials")}</a>`
+      : ""
   ].filter(Boolean);
   return links.length ? `<p class="publication-links">${links.join("")}</p>` : "";
 };
@@ -116,20 +120,29 @@ setText('[data-field="name"]', content.name);
 setText('[data-field="role"]', content.role);
 setText('[data-field="bio"]', content.bio);
 setText('[data-field="score"]', content.scoreText);
+setText('[data-field="overviewTitle"]', content.overviewTitle);
+setText('[data-field="overviewIntro"]', content.overviewIntro);
 setText("[data-footer]", `© ${new Date().getFullYear()} ${content.name}`);
+
+const allPublications = Array.isArray(content.publications)
+  ? content.publications
+  : content.publications?.all || [];
+const scorePublications = content.recentPublications?.score ||
+  allPublications.filter((item) => item.score);
+const selectedPublications = content.recentPublications?.selected ||
+  allPublications
+    .filter((item) => !item.score && ["2026", "2025"].includes(item.year))
+    .slice(0, Math.max(0, content.overviewPublicationCount - scorePublications.length));
 
 if (document.body.dataset.page === "home") {
   const overviewProjects = content.projects
     .filter((item) => item.status === "ongoing")
     .slice(0, content.overviewProjectCount);
-  const scorePublications = content.publications.filter((item) => item.score);
-  const otherPublications = content.publications
-    .filter((item) => !item.score && ["2026", "2025"].includes(item.year))
-    .slice(0, Math.max(0, content.overviewPublicationCount - scorePublications.length));
 
   renderLinks("[data-profile-links]", content.profileLinks);
+  renderPlainList("[data-overview-highlights]", content.overviewHighlights || []);
   renderProjects("[data-overview-projects]", overviewProjects);
-  renderPublications("[data-overview-publications]", [...scorePublications, ...otherPublications]);
+  renderPublications("[data-overview-publications]", [...scorePublications, ...selectedPublications]);
 }
 
 if (document.body.dataset.page === "research") {
@@ -148,8 +161,8 @@ if (document.body.dataset.page === "projects") {
 }
 
 if (document.body.dataset.page === "publications") {
-  renderPublications("[data-score-publications]", content.publications.filter((item) => item.score));
-  renderGroupedPublications("[data-all-publications]", content.publications);
+  renderPublications("[data-score-publications]", scorePublications);
+  renderGroupedPublications("[data-all-publications]", allPublications);
 }
 
 if (document.body.dataset.page === "contact") {
