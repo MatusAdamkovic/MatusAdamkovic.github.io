@@ -35,7 +35,6 @@ window.siteContent = {
     "gaming disorder"
   ],
   "cvFile": "assets/adamkovic_academic_cv.pdf?v=20261103.4",
-  "researchSummary": "I lead research labs at Charles University and the Centre of Social and Psychological Sciences of the Slovak Academy of Sciences, and work as an ERC-funded postdoctoral researcher at the University of Jyväskylä. My projects investigate research credibility, psychological measurement, and the use of large language models in meta-research. I also contribute to large-scale international collaborations in replication and open science.",
   "scoreText": "The SCORE collaboration investigated the replicability, reproducibility, and analytical robustness of social and behavioral science. These three Nature papers summarize the findings.",
   "researchAppointments": [
     {
@@ -939,41 +938,9 @@ window.siteContent = {
       ]
     }
   ],
-  "interestsText": "My most recent projects aim to automate tedious tasks needed for meta-research, so that researchers can put their valuable time and energy to better use.",
+  "interestsText": "My most recent projects focus on automating the tedious bits of meta-research, so researchers can put their time and energy to better use.",
   "scoreUrl": "https://www.cos.io/score",
   "psaUrl": "https://psysciacc.org/projects.html",
-  "talks": [
-    {
-      "date": "2026",
-      "title": "On the Questionable Credibility of Social Science Research: The Role of Measurement",
-      "organization": "European Character and Virtue Association · Invited talk · Trnava"
-    },
-    {
-      "date": "2026",
-      "title": "Research Practices and Transparency in Slovak Social Sciences: A National Analysis Based on Random Sampling of Publications (2013–2022)",
-      "organization": "World Conference on Research Integrity · Vancouver"
-    },
-    {
-      "date": "2026",
-      "title": "When Results Are Too Good to be True: Approaches to Detecting Questionable Research Practices",
-      "organization": "SPAO · Stará Lesná"
-    },
-    {
-      "date": "2025",
-      "title": "Leveraging Large Language Models for Data Extraction in Metaresearch: a Feasibility Study and Automatised Protocol",
-      "organization": "Metascience · London"
-    },
-    {
-      "date": "2024",
-      "title": "Open Science and Responsible Research Practices: Sharing is Caring",
-      "organization": "European Association of Social Psychology Summer School · Košice"
-    },
-    {
-      "date": "2023",
-      "title": "Open Science Practices in Game Science Research",
-      "organization": "The Game-n-Science Institute & Yonsei University · Invited talk · Seoul"
-    }
-  ],
   "publicationTopics": [
     {
       "id": "meta-research",

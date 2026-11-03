@@ -5,7 +5,7 @@ A simple static personal website designed for GitHub Pages.
 ## Pages
 
 - `index.html` — bio, some recent publications (including SCORE), and selected projects
-- `research.html` — research, selected talks, supervision, education, collaborations, and CV download
+- `research.html` — research, supervision, education, collaborations, and CV download
 - `projects.html` — projects and grants (ongoing / upcoming / finished)
 - `publications.html` — full publication list, with overlapping topics and year navigation
 - `contact.html` — email and profile links
@@ -36,8 +36,10 @@ Things worth knowing:
 - **Topics**: each paper has a `topics` array of IDs, for example
   `"topics": ["gaming", "measurement", "networks"]`. A paper can belong to several
   topics without duplicating its record. Edit the labels in `publicationTopics`.
-- **Academic profile**: edit `researchAppointments`, `interestsText`, `talks`,
+- **Academic profile**: edit `researchAppointments`, `interestsText`,
   `supervision`, `education`, `collaborations`, and `awards` in the same content file.
+- **Overview focus paragraph**: `interestsText` appears on the overview and under
+  Research interests, so editing it updates both places.
 - **Contact**: the address is plain text with `[[at]]`, without a mailto link.
   The public CV uses the same notation. This discourages simple scrapers but is
   not a guarantee against sophisticated bots or copies of earlier versions.

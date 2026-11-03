@@ -117,9 +117,8 @@ test("paper DOI links and optional custom links are rendered safely", () => {
   assert.equal(vm.runInContext('escapeHtml("<script>")', context), "&lt;script&gt;");
 });
 
-test("research profile includes talks and complete Jyväskylä affiliation", () => {
+test("research profile retains complete affiliations and collaborations", () => {
   const { node } = loadPage("research");
-  assert.match(node("[data-talks]").innerHTML, /Leveraging Large Language Models/);
   assert.match(node("[data-collaborations]").innerHTML, /International Trauma Consortium/);
   assert.match(node("[data-research-appointments]").innerHTML, /Faculty of Humanities and Social Sciences/);
   assert.doesNotMatch(node("[data-research-areas]").innerHTML, /methodology of behavioral research/);
@@ -175,5 +174,14 @@ test("removed publication and profile controls are absent", () => {
   const publications = fs.readFileSync(path.join(root, "publications.html"), "utf8");
   const research = fs.readFileSync(path.join(root, "research.html"), "utf8");
   assert.doesNotMatch(publications, /type="search"|data-publication-year/);
-  assert.doesNotMatch(research, /data-teaching|data-service/);
+  assert.doesNotMatch(research, /data-teaching|data-service|data-talks|#talks|researchSummary/);
+});
+
+test("overview includes the informal automation paragraph without the removed research intro", () => {
+  const { node, content } = loadPage("home");
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(html, /data-field="interestsText"/);
+  assert.match(node('[data-field="interestsText"]').textContent, /the tedious bits of meta-research/);
+  assert.equal(content.researchSummary, undefined);
+  assert.equal(content.talks, undefined);
 });

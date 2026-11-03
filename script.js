@@ -105,7 +105,7 @@ const renderTimeline = (selector, items = []) => render(selector, items.map((ite
     ${item.note ? `<p class="note">${escapeHtml(item.note)}</p>` : ""}
   </article>`).join(""));
 
-["name", "role", "bio", "researchSummary", "scoreText", "interestsText", "updated"].forEach((field) => {
+["name", "role", "bio", "scoreText", "interestsText", "updated"].forEach((field) => {
   setText(`[data-field="${field}"]`, content[field]);
 });
 setText("[data-footer]", `© ${new Date().getFullYear()} ${content.name}`);
@@ -125,7 +125,6 @@ if (page === "research") {
   renderPlainList("[data-research-areas]", content.researchAreas);
   renderTimeline("[data-research-appointments]", content.researchAppointments);
   renderTimeline("[data-previous-appointments]", content.previousAppointments);
-  renderTimeline("[data-talks]", content.talks);
   renderTimeline("[data-supervision]", content.supervision);
   renderTimeline("[data-education]", content.education);
   renderPlainList("[data-collaborations]", content.collaborations);
