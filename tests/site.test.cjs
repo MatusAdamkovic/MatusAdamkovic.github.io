@@ -124,6 +124,12 @@ test("research profile retains complete affiliations and collaborations", () => 
   assert.doesNotMatch(node("[data-research-areas]").innerHTML, /methodology of behavioral research/);
 });
 
+test("PhD supervision excludes the research-visit entry", () => {
+  const { node, content } = loadPage("research");
+  assert.equal(content.supervision.length, 2);
+  assert.doesNotMatch(node("[data-supervision]").innerHTML, /Santos|research visit/);
+});
+
 test("all page shells have accessible navigation, a main target, and existing assets", () => {
   for (const file of ["index.html", "research.html", "projects.html", "publications.html", "contact.html"]) {
     const html = fs.readFileSync(path.join(root, file), "utf8");

@@ -76,11 +76,6 @@ window.siteContent = {
       "date": "2023–2026",
       "title": "Benjamin Šimsa",
       "organization": "Transparent Reporting Practices and Computational Reproducibility in Experience Sampling Method Research in Psychology"
-    },
-    {
-      "date": "2024–2025",
-      "title": "Verônica Bem dos Santos",
-      "organization": "Gender Relations in the Criminal Investigation of Homicides of Women: A Comparative Perspective between Brazil and the Slovak Republic (research visit)"
     }
   ],
   "education": [
