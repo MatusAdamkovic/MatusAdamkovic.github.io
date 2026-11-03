@@ -3,39 +3,78 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Download the academic CV of Matúš Adamkovič.">
-    <title>CV · Matúš Adamkovič</title>
+    <meta name="description" content="Research appointments, teaching, supervision, and academic CV of Matúš Adamkovič.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Research & teaching · Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261103.3">
   </head>
-  <body data-page="cv">
+  <body data-page="research">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html">Matúš Adamkovič</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="research.html" aria-current="page">CV</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="index.html">Matúš Adamkovič</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Overview</a>
+          <a href="research.html" aria-current="page">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
-
-    <main>
-      <section class="page-hero">
-        <p class="kicker">Curriculum vitae</p>
-        <h1>Academic CV</h1>
-        <p class="lead">My full academic CV can be downloaded here.</p>
-        <div class="actions">
-          <a data-cv-download href="assets/adamkovic_academic_cv.pdf" download>Download CV (PDF)</a>
+    <main id="main" tabindex="-1">
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="kicker">Academic profile</p>
+        <h1 id="page-title">Research &amp; teaching</h1>
+        <p class="lead" data-field="researchSummary"></p>
+        <div class="actions"><a data-cv-download href="assets/adamkovic_academic_cv.pdf" download="Adamkovic_academic_CV.pdf">Download CV (PDF)</a><span class="date" data-field="updated"></span></div>
+        <nav class="jump-links" aria-label="Academic profile sections">
+          <a href="#appointments">Research</a><a href="#teaching">Teaching</a><a href="#supervision">Supervision</a><a href="#education">Education</a><a href="#service">Service</a>
+        </nav>
+      </section>
+      <section class="section-grid" aria-labelledby="interests-title">
+        <div class="section-heading"><h2 id="interests-title">Research interests</h2></div>
+        <ul class="tag-list section-body" data-research-areas></ul>
+      </section>
+      <section class="section-grid" id="appointments" aria-labelledby="appointments-title">
+        <div class="section-heading"><h2 id="appointments-title">Research appointments</h2></div>
+        <div class="section-body">
+          <div class="timeline" data-research-appointments></div>
+          <details><summary>Previous appointments</summary><div class="timeline" data-previous-appointments></div></details>
         </div>
       </section>
+      <section class="section-grid" id="teaching" aria-labelledby="teaching-title">
+        <div class="section-heading"><h2 id="teaching-title">Teaching</h2></div>
+        <div class="section-body timeline" data-teaching></div>
+      </section>
+      <section class="section-grid" id="supervision" aria-labelledby="supervision-title">
+        <div class="section-heading"><h2 id="supervision-title">PhD supervision</h2></div>
+        <div class="section-body timeline" data-supervision></div>
+      </section>
+      <section class="section-grid" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><h2 id="education-title">Education</h2></div>
+        <div class="section-body timeline" data-education></div>
+      </section>
+      <section class="section-grid" id="service" aria-labelledby="service-title">
+        <div class="section-heading"><h2 id="service-title">Service &amp; collaborations</h2></div>
+        <div class="section-body">
+          <ul class="plain-list" data-service></ul>
+          <h3 class="subsection-title">International collaborations</h3>
+          <ul class="plain-list" data-collaborations></ul>
+        </div>
+      </section>
+      <section class="section-grid" aria-labelledby="awards-title">
+        <div class="section-heading"><h2 id="awards-title">Selected awards</h2></div>
+        <ul class="section-body plain-list" data-awards></ul>
+      </section>
     </main>
-
     <footer class="site-footer">
       <span data-footer></span>
+      <span>Updated <span data-field="updated">November 2026</span></span>
+      <a href="#main">Back to top</a>
     </footer>
-
-    <script src="content/site-content.js"></script>
-    <script src="script.js"></script>
+    <script src="content/site-content.js?v=20261103.3"></script>
+    <script src="script.js?v=20261103.3"></script>
   </body>
 </html>

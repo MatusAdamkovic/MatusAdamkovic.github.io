@@ -3,44 +3,53 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Publications by Matúš Adamkovič.">
+    <meta name="description" content="Journal publications by Matúš Adamkovič, with paper and research-material links.">
+    <meta name="theme-color" content="#ffffff">
     <title>Publications · Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261103.3">
   </head>
   <body data-page="publications">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html">Matúš Adamkovič</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="research.html">CV</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html" aria-current="page">Publications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="index.html">Matúš Adamkovič</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Overview</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html" aria-current="page">Publications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
-
-    <main>
-      <section class="page-hero">
-        <p class="kicker">Publications</p>
-        <h1>Publications</h1>
-        <nav class="publication-toc" aria-label="Publication years" data-publication-toc></nav>
+    <main id="main" tabindex="-1">
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="kicker">Research</p>
+        <h1 id="page-title">Publications</h1>
       </section>
-
-      <section class="section-grid publication-section" aria-labelledby="all-publications-title">
-        <div>
-          <p class="section-label">All</p>
-          <h2 id="all-publications-title">Full list</h2>
+      <div class="publication-layout">
+        <aside class="publication-sidebar" aria-label="Browse publications">
+          <p class="section-label">By year</p>
+          <nav class="publication-toc" aria-label="Publication years" data-publication-toc></nav>
+        </aside>
+        <div class="section-body">
+          <div class="publication-tools" role="search" aria-label="Search publications">
+            <div class="field"><label for="publication-search">Search publications</label><input type="search" id="publication-search" placeholder="Title, author, or keyword" data-publication-search autocomplete="off"></div>
+            <div class="field"><label for="publication-year">Year / status</label><select id="publication-year" data-publication-year><option value="">All years</option></select></div>
+          </div>
+          <p class="sr-only" data-search-status role="status" aria-live="polite"></p>
+          <div data-all-publications></div>
+          <p class="empty-state" data-no-results hidden>No matching publications.</p>
         </div>
-        <div data-all-publications></div>
-      </section>
+      </div>
     </main>
-
     <footer class="site-footer">
       <span data-footer></span>
+      <span>Updated <span data-field="updated">November 2026</span></span>
+      <a href="#main">Back to top</a>
     </footer>
-
-    <script src="content/site-content.js"></script>
-    <script src="script.js"></script>
+    <script src="content/site-content.js?v=20261103.3"></script>
+    <script src="script.js?v=20261103.3"></script>
   </body>
 </html>

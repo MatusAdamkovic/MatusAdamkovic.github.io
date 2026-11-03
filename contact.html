@@ -3,38 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact Matúš Adamkovič.">
+    <meta name="description" content="Contact Matúš Adamkovič and find his academic profiles.">
+    <meta name="theme-color" content="#ffffff">
     <title>Contact · Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261103.3">
   </head>
   <body data-page="contact">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html">Matúš Adamkovič</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="research.html">CV</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html" aria-current="page">Contact</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="index.html">Matúš Adamkovič</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Overview</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
     </header>
-
-    <main>
-      <section class="page-hero">
-        <p class="kicker">Contact</p>
-        <h1>Contact</h1>
+    <main id="main" tabindex="-1">
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="kicker">Get in touch</p>
+        <h1 id="page-title">Contact</h1>
         <p class="lead">The quickest way to reach me is by email. I'm not really active on socials.</p>
-        <p class="contact-links" data-contact></p>
+        <div class="contact-links" data-contact></div>
         <div class="actions" data-profile-links></div>
       </section>
     </main>
-
     <footer class="site-footer">
       <span data-footer></span>
+      <span>Updated <span data-field="updated">November 2026</span></span>
+      <a href="#main">Back to top</a>
     </footer>
-
-    <script src="content/site-content.js"></script>
-    <script src="script.js"></script>
+    <script src="content/site-content.js?v=20261103.3"></script>
+    <script src="script.js?v=20261103.3"></script>
   </body>
 </html>

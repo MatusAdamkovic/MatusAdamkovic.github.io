@@ -3,85 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Personal website of Matúš Adamkovič, researcher in research credibility, meta-science, measurement, and network approaches to psychological phenomena."
-    >
+    <meta name="description" content="Matúš Adamkovič: research credibility, meta-science, psychological measurement, and network approaches.">
+    <meta name="theme-color" content="#ffffff">
     <title>Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261103.3">
   </head>
   <body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html" data-field="name">Matúš Adamkovič</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Overview</a>
-        <a href="research.html">CV</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="index.html">Matúš Adamkovič</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Overview</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
-
-    <main>
+    <main id="main" tabindex="-1">
       <section class="intro" aria-labelledby="intro-title">
         <div class="intro-copy">
           <p class="kicker" data-field="role">Meta-science · Research credibility · Measurement</p>
           <h1 id="intro-title" data-field="name">Matúš Adamkovič</h1>
-          <p class="lead" data-field="bio"></p>
+          <p class="lead" data-field="bio">I'm a researcher interested in the credibility of social science research. My work focuses on meta-scientific topics, measurement, and network approach to psychological phenomena.</p>
           <div class="actions" data-profile-links></div>
         </div>
         <figure class="portrait">
-          <img src="assets/profile.png" alt="Portrait of Matúš Adamkovič">
+          <img src="assets/profile.png" alt="Matúš Adamkovič" width="460" height="460" fetchpriority="high">
         </figure>
       </section>
-
-      <section class="section-grid" aria-labelledby="overview-title">
-        <div>
-          <p class="section-label">Overview</p>
-          <h2 id="overview-title" data-field="overviewTitle">Research work</h2>
-        </div>
-        <div class="list" data-overview-positions></div>
-      </section>
-
-      <section class="section-grid" aria-labelledby="interests-title">
-        <div>
-          <p class="section-label">Overview</p>
-          <h2 id="interests-title">Research interests</h2>
-        </div>
-        <div class="text-block">
-          <ul class="tag-list" data-research-areas></ul>
-        </div>
-      </section>
-
-      <section class="section-grid" aria-labelledby="overview-projects-title">
-        <div>
-          <p class="section-label">Projects</p>
-          <h2 id="overview-projects-title">Selected projects</h2>
-        </div>
-        <div>
-          <div class="list" data-overview-projects></div>
-          <p class="section-link"><a href="projects.html">All projects</a></p>
-        </div>
-      </section>
-
-      <section class="section-grid" aria-labelledby="overview-publications-title">
-        <div>
-          <p class="section-label">Publications</p>
-          <h2 id="overview-publications-title">Selected publications</h2>
-        </div>
-        <div>
-          <div class="list" data-overview-publications></div>
+      <section class="section-grid" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <p class="section-label">Recent work</p>
+          <h2 id="publications-title">Selected publications</h2>
           <p class="section-link"><a href="publications.html">All publications</a></p>
         </div>
+        <div class="section-body">
+          <div class="list" data-overview-publications></div>
+          <h3 class="score-heading">The SCORE project</h3>
+          <p class="section-intro" data-field="scoreText"></p>
+          <div class="list" data-score-publications></div>
+        </div>
+      </section>
+      <section class="section-grid" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-label">Research</p>
+          <h2 id="projects-title">Selected projects</h2>
+          <p class="section-link"><a href="projects.html">All projects &amp; grants</a></p>
+        </div>
+        <div class="section-body list" data-overview-projects></div>
       </section>
     </main>
-
     <footer class="site-footer">
       <span data-footer></span>
+      <span>Updated <span data-field="updated">November 2026</span></span>
+      <a href="#main">Back to top</a>
     </footer>
-
-    <script src="content/site-content.js"></script>
-    <script src="script.js"></script>
+    <script src="content/site-content.js?v=20261103.3"></script>
+    <script src="script.js?v=20261103.3"></script>
   </body>
 </html>

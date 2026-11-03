@@ -3,52 +3,53 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Research projects and grants of Matúš Adamkovič.">
+    <meta name="description" content="Ongoing, upcoming, and completed research projects and grants of Matúš Adamkovič.">
+    <meta name="theme-color" content="#ffffff">
     <title>Projects · Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261103.3">
   </head>
   <body data-page="projects">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html">Matúš Adamkovič</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="research.html">CV</a>
-        <a href="projects.html" aria-current="page">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-inner">
+        <a class="wordmark" href="index.html">Matúš Adamkovič</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Overview</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
-
-    <main>
-      <section class="page-hero">
-        <p class="kicker">Projects</p>
-        <h1>Projects &amp; grants</h1>
-        <p class="lead">Current and finished research projects.</p>
+    <main id="main" tabindex="-1">
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="kicker">Research</p>
+        <h1 id="page-title">Projects &amp; grants</h1>
+        <nav class="jump-links" aria-label="Project sections">
+          <a href="#ongoing">Ongoing</a><a href="#upcoming">Upcoming</a><a href="#finished">Finished</a>
+        </nav>
       </section>
-
-      <section class="section-grid" aria-labelledby="ongoing-projects-title">
-        <div>
-          <p class="section-label">Projects</p>
-          <h2 id="ongoing-projects-title">Ongoing</h2>
-        </div>
-        <div class="list" data-ongoing-projects></div>
+      <section class="section-grid" id="ongoing" data-project-section="ongoing" aria-labelledby="ongoing-title">
+        <div class="section-heading"><h2 id="ongoing-title">Ongoing</h2></div>
+        <div class="section-body list" data-ongoing-projects></div>
       </section>
-
-      <section class="section-grid" aria-labelledby="finished-projects-title">
-        <div>
-          <p class="section-label">Projects</p>
-          <h2 id="finished-projects-title">Finished</h2>
-        </div>
-        <div class="list" data-finished-projects></div>
+      <section class="section-grid" id="upcoming" data-project-section="upcoming" aria-labelledby="upcoming-title">
+        <div class="section-heading"><h2 id="upcoming-title">Upcoming</h2></div>
+        <div class="section-body list" data-upcoming-projects></div>
+      </section>
+      <section class="section-grid" id="finished" data-project-section="finished" aria-labelledby="finished-title">
+        <div class="section-heading"><h2 id="finished-title">Finished</h2></div>
+        <div class="section-body list" data-finished-projects></div>
       </section>
     </main>
-
     <footer class="site-footer">
       <span data-footer></span>
+      <span>Updated <span data-field="updated">November 2026</span></span>
+      <a href="#main">Back to top</a>
     </footer>
-
-    <script src="content/site-content.js"></script>
-    <script src="script.js"></script>
+    <script src="content/site-content.js?v=20261103.3"></script>
+    <script src="script.js?v=20261103.3"></script>
   </body>
 </html>

@@ -5,7 +5,8 @@
 window.siteContent = {
   "name": "Matúš Adamkovič",
   "role": "Meta-science · Research credibility · Measurement",
-  "bio": "I'm interested in the credibility of social sciences, meta-research, measurement, and the network approach to psychological phenomena.",
+  "bio": "I'm a researcher interested in the credibility of social science research. My work focuses on meta-scientific topics, measurement, and network approach to psychological phenomena.",
+  "updated": "November 2026",
   "profileLinks": [
     {
       "label": "Google Scholar",
@@ -27,7 +28,6 @@ window.siteContent = {
     }
   ],
   "researchAreas": [
-    "methodology of behavioral research",
     "research credibility",
     "meta-science",
     "measurement",
@@ -35,24 +35,122 @@ window.siteContent = {
     "open science",
     "gaming disorder"
   ],
-  "overviewTitle": "Research work",
-  "overviewPositions": [
+  "cvFile": "assets/adamkovic_academic_cv.pdf?v=20261103",
+  "researchSummary": "I lead research labs at Charles University and the Centre of Social and Psychological Sciences of the Slovak Academy of Sciences, and work as an ERC-funded postdoctoral researcher at the University of Jyväskylä. My projects investigate research credibility, psychological measurement, and the use of large language models in meta-research. I also contribute to large-scale international collaborations in replication and open science.",
+  "scoreText": "The SCORE collaboration investigated the replicability, reproducibility, and analytical robustness of social and behavioral science. These three Nature papers report the findings.",
+  "researchAppointments": [
     {
-      "title": "Slovak Academy of Sciences",
-      "role": "Senior researcher"
+      "date": "2024–present",
+      "title": "Lab leader",
+      "organization": "Faculty of Education, Charles University, Czechia"
     },
     {
-      "title": "Charles University",
-      "role": "Lab lead (project PRIMUS)"
-    },
-    {
-      "title": "University of Jyväskylä",
-      "role": "ERC-funded postdoc (project ORE)",
+      "date": "2022–present",
+      "title": "ERC-funded postdoctoral researcher",
+      "organization": "Faculty of Humanities and Social Sciences, University of Jyväskylä, Finland",
       "url": "https://ore.jyu.fi"
+    },
+    {
+      "date": "2019–present",
+      "title": "Lab leader",
+      "organization": "Centre of Social and Psychological Sciences, Slovak Academy of Sciences"
     }
   ],
-  "cvFile": "assets/adamkovic_academic_cv.pdf",
+  "previousAppointments": [
+    {
+      "date": "2020–2022",
+      "title": "Researcher",
+      "organization": "Faculty of Education, Charles University, Czechia"
+    },
+    {
+      "date": "2019–2023",
+      "title": "Researcher",
+      "organization": "Institute of Psychology, University of Presov, Slovakia"
+    }
+  ],
+  "teaching": [
+    {
+      "date": "2026–present",
+      "title": "Metropolitan University, Prague",
+      "organization": "Psychological Methods; Statistics for Psychologists (BA)"
+    },
+    {
+      "date": "2025–present",
+      "title": "Faculty of Arts and Letters, Catholic University in Ružomberok",
+      "organization": "Psychological Methods 1 and 2; Statistics 1 (BA); Statistical Methods in Psychology Research (PhD)"
+    },
+    {
+      "date": "2024–present",
+      "title": "University of Jyväskylä",
+      "organization": "Questionable research practices and how to detect them (part of a PhD course)"
+    },
+    {
+      "date": "2015–2023",
+      "title": "University of Presov",
+      "organization": "Cognitive psychology; advanced statistics and psychometrics; statistical practices (BA and MA); structural equation modeling (PhD)"
+    }
+  ],
+  "supervision": [
+    {
+      "date": "2025–present",
+      "title": "Viktória Gajdošová",
+      "organization": "Validation of Large Language Models for Semantic Similarity and Content Validity Assessment in Psychological Scales"
+    },
+    {
+      "date": "2023–2026",
+      "title": "Benjamin Šimsa",
+      "organization": "Transparent Reporting Practices and Computational Reproducibility in Experience Sampling Method Research in Psychology"
+    },
+    {
+      "date": "2024–2025",
+      "title": "Verônica Bem dos Santos",
+      "organization": "Gender Relations in the Criminal Investigation of Homicides of Women: A Comparative Perspective between Brazil and the Slovak Republic (research visit)"
+    }
+  ],
+  "education": [
+    {
+      "date": "2015–2019",
+      "title": "PhD in Psychology",
+      "organization": "Institute of Psychology, University of Presov, Slovakia",
+      "note": "Dissertation: Consequences of poverty on economic decision-making: Assessing the verisimilitude of the cognitive mechanism",
+      "url": "https://osf.io/sk4yj/"
+    },
+    {
+      "date": "2010–2015",
+      "title": "Master’s degree in Psychology",
+      "organization": "Institute of Psychology, University of Presov, Slovakia",
+      "note": "Thesis: Intelligence as a Predictor of Complex Problem Solving"
+    }
+  ],
+  "service": [
+    "Co-founder of the Slovak Reproducibility Network; lead of its Scientific Team, 2022–2024.",
+    "Member of the Scientific Board of the Centre of Social and Psychological Sciences, Slovak Academy of Sciences, since 2024.",
+    "Methods and statistics expert for the Centre of Finnish Registered Reports.",
+    "Member of the stakeholder forum for the iRISE Horizon Europe project.",
+    "Expert panel member on the adoption of ICD-11 Gaming Disorder into the Korean Standard Classification of Diseases."
+  ],
+  "collaborations": [
+    "SCORE (Center for Open Science and U.S. Department of Defense)",
+    "Replicability Project: Health Behavior (Center for Open Science)",
+    "Psychological Science Accelerator",
+    "Multi100 (Center for Open Science)",
+    "Many Economists (University of Seattle)"
+  ],
+  "awards": [
+    "1st place in the climate domain of the WOCCAP prediction tournament (2025).",
+    "3rd place in the Social Sciences and Humanities postdoctoral researchers’ evaluation at the Slovak Academy of Sciences (2025)."
+  ],
   "projects": [
+    {
+      "status": "upcoming",
+      "selected": true,
+      "date": "2027–2032",
+      "title": "Leveraging the Capabilities of Large Language Models for Automating Quantitative and Qualitative Meta-Research",
+      "label": "GAČR Junior Star · Principal investigator",
+      "funder": "Czech Science Foundation",
+      "budget": "Approx. 1,000,000 EUR",
+      "description": ""
+    },
     {
       "status": "ongoing",
       "selected": true,
@@ -68,21 +166,21 @@ window.siteContent = {
       "date": "2024–2027",
       "title": "Systematic research on the empirical robustness of effects in education and psychology",
       "label": "PRIMUS/24/SSH/017 · Principal investigator",
-      "budget": "11,720,212 CZK (approx. 481,000 EUR)",
+      "budget": "11,720,212 CZK (approx. 485,000 EUR)",
       "description": ""
     },
     {
       "status": "ongoing",
-      "date": "2026–present",
-      "title": "OPENLABS",
+      "date": "2026–2029",
+      "title": "OPENLABS: Development of the Open Research Infrastructure Concept of the Slovak Academy of Sciences for Applied Research in Slovakia",
       "label": "401103H278 · Investigator",
-      "budget": "17,985,443 EUR",
+      "budget": "Approx. 18,000,000 EUR",
       "description": ""
     },
     {
       "status": "ongoing",
       "selected": true,
-      "date": "2024–present",
+      "date": "2024–2027",
       "title": "The quality of empirical evidence in psychology and education",
       "label": "APVV-23-0421 · Investigator",
       "budget": "199,511 EUR",
@@ -91,7 +189,7 @@ window.siteContent = {
     {
       "status": "ongoing",
       "selected": true,
-      "date": "2023–present",
+      "date": "2023–2026",
       "title": "A large-scale meta-scientific analysis of the state of Slovak studies and final theses in social sciences",
       "label": "APVV-22-0458 · Investigator",
       "budget": "249,904 EUR",
@@ -99,12 +197,22 @@ window.siteContent = {
     },
     {
       "status": "ongoing",
+      "selected": true,
       "date": "2022–present",
       "title": "Ontological Reconstruction of Gaming Disorder (ORE)",
       "label": "ERC 101042052 · Investigator",
       "budget": "1,986,991 EUR",
       "description": "",
       "url": "https://ore.jyu.fi"
+    },
+    {
+      "status": "ongoing",
+      "date": "2026–2030",
+      "title": "The support system for children of parents with mental disorder",
+      "label": "APVV-25-0711 · Investigator",
+      "funder": "Slovak Research and Development Agency",
+      "budget": "",
+      "description": ""
     },
     {
       "status": "finished",
@@ -125,7 +233,7 @@ window.siteContent = {
     {
       "status": "finished",
       "date": "2021–2022",
-      "title": "Integrative strategy in personalized medicine for selected malignant cancers",
+      "title": "Integrative strategy in the development of personalized medicine for selected malignant cancers and its impact on quality of life",
       "label": "LISPER 313011V446 · Investigator",
       "budget": "12,773,811 EUR",
       "description": ""
@@ -189,87 +297,115 @@ window.siteContent = {
   ],
   "publications": [
     {
-      "year": "Accepted",
-      "citation": "Stoevenbelt, A. H., Flore, P. C., Wicherts, J. M., Adamkovič, M., ... Weiss, L. (in press). Registered replication report: Johns, Schmader, & Martens (2005). Advances in Methods and Practices in Psychological Science.",
-      "paperUrl": "",
-      "materialsUrl": ""
-    },
-    {
-      "year": "Accepted",
-      "citation": "Pennington, Ch. R., Norris, E., Skubera, M., … Adamkovič, M., ... Clark, K. (in press). Awareness and Use of Open Research Practices: An International Survey of Researchers Across Disciplines. Royal Society Open Science.",
-      "paperUrl": "",
-      "materialsUrl": ""
-    },
-    {
-      "year": "Accepted",
-      "citation": "Jin, Y., Adamkovič, M., Martončik, M., & Karhulahti, V.-M. (accepted-in-principle). Natural Recovery and Gaming Disorder: A Case Series. PCI Registered Reports.",
-      "paperUrl": "",
-      "materialsUrl": ""
-    },
-    {
-      "year": "Accepted",
+      "year": "Accepted in principle",
       "citation": "Auranen, T., Adamkovič, M., Martončik, M., … & Karhulahti, V.-M. (accepted-in-principle). Gaming Disorder: A qualitative meta-synthesis of related case studies. PCI Registered Reports.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "Accepted",
-      "citation": "Karhulahti, V.-M., Martončik, M., Siutila, M., … Adamkovič, M., … Yoon, T.-J. (accepted-in-principle). Reconstructing Gaming Disorder: A Taxonomy by Registered Report. PCI Registered Reports.",
+      "year": "Accepted in principle",
+      "citation": "Karhulahti, V.-M., Martončik, M., Siutila, M., … Adamkovič, M., …Yoon, T.-J. (accepted-in-principle). Reconstructing Gaming Disorder: A Taxonomy by Registered Report. PCI Registered Reports.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "Accepted",
+      "year": "Accepted in principle",
       "citation": "Martončik, M., Adamkovič, M., Baník, G., ... Vargová, L. (accepted-in-principle). Barriers and facilitators to the adoption and promotion of Open Science practices in psychology. The case of Slovakia. PCI Registered Reports.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
       "year": "2026",
-      "selected": true,
+      "citation": "Jin, Y., Adamkovič, M., Martončik, M., & Karhulahti, V.-M. (2026). Natural recovery and gaming disorder: a case series. Royal Society Open Science, 13(10), 262017. https://doi.org/10.1098/rsos.262017.",
+      "title": "Natural recovery and gaming disorder: a case series",
+      "venue": "Royal Society Open Science",
+      "paperUrl": "",
+      "materialsUrl": "",
+      "selected": true
+    },
+    {
+      "year": "2026",
+      "citation": "Hyland, P., Shevlin, M., Ben-Ezra, M., Cloitre, M., Adamkovic, M., ... & Karatzias, T. (2026). Examining the performance of the International Trauma Questionnaire with clinical checks in a multinational European sample. PloS One, 21(10), e0360940. https://doi.org/10.1371/journal.pone.0360940.",
+      "paperUrl": "",
+      "materialsUrl": ""
+    },
+    {
+      "year": "2026",
+      "citation": "Stoevenbelt, A. H., Flore, P. C., Adamkovic, M., … Wicherts, J. M. (2026). Registered Replication Report: Johns et al. (2005). Advances in Methods and Practices in Psychological Science, 9(4). https://doi.org/10.1177/25152459261424724.",
+      "paperUrl": "",
+      "materialsUrl": ""
+    },
+    {
+      "year": "2026",
+      "citation": "Karhulahti, V.-M., Adamkovič, M., & Martončik, M. (2026). High-impact psychology journals fail to publish qualitative studies. Swiss Psychology Open, 6(1). https://doi.org/10.5334/spo.107.",
+      "paperUrl": "",
+      "materialsUrl": ""
+    },
+    {
+      "year": "2026",
+      "citation": "Pennington, C. R., Norris, E., Skubera, M., … Adamkovič, M., … Clark, K. (2026). Awareness and use of open research practices: an international survey of researchers across disciplines. Royal Society Open Science, 13(8). https://doi.org/10.1098/rsos.260462.",
+      "paperUrl": "",
+      "materialsUrl": ""
+    },
+    {
+      "year": "2026",
       "citation": "Simsa, B., Buts, A., Ropovik, I., & Adamkovič, M. (2026). Automating data extraction in meta-research: A multi-model benchmark in network psychometrics papers. Behavior Research Methods, 58, 170. doi:10.3758/s13428-026-03052-7.",
+      "title": "Automating data extraction in meta-research: A multi-model benchmark in network psychometrics papers",
+      "venue": "Behavior Research Methods",
+      "paperUrl": "",
+      "materialsUrl": "",
+      "selected": true
+    },
+    {
+      "year": "2026",
+      "citation": "Levin, Y., Mor-Ben-Ishai, S., Hyland, P., ... Adamkovic, M., ... & Ben-Ezra, M. (2026). Cross-national patterns of probable complex PTSD in post-communist Europe: A network analysis of five countries. Psychiatry Research, 364(117303), 117303. doi: 10.1016/j.psychres.2026.117303.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
       "year": "2026",
-      "citation": "Levin, Y., Mor-Ben-Ishai, S., Hyland, P., ... Adamkovic, M., ... & Ben-Ezra, M. (2026). Cross-national patterns of probable complex PTSD in post-communist Europe: A network analysis of five countries. Psychiatry Research, 364(117303), 117303. doi:10.1016/j.psychres.2026.117303.",
-      "paperUrl": "",
-      "materialsUrl": ""
-    },
-    {
-      "year": "2026",
-      "selected": true,
       "citation": "Tyner, A. H., Abatayo, A. L., Daley, M., ... Adamkovič, M., ... Errington, T. M. (2026). Investigating the replicability of the social and behavioral sciences. Nature, 652(8108), 143–150. doi:10.1038/s41586-025-10078-y.",
+      "title": "Investigating the replicability of the social and behavioral sciences",
+      "venue": "Nature",
       "paperUrl": "",
-      "materialsUrl": ""
+      "materialsUrl": "",
+      "selected": true,
+      "score": true
     },
     {
       "year": "2026",
-      "selected": true,
       "citation": "Aczel, B., Szaszi, B., Clelland, H. T., ... Adamkovič, M., ... Nosek, B. A. (2026). Investigating the analytical robustness of the social and behavioral sciences. Nature, 652(8108), 135–142. doi:10.1038/s41586-025-09844-9.",
+      "title": "Investigating the analytical robustness of the social and behavioral sciences",
+      "venue": "Nature",
       "paperUrl": "",
-      "materialsUrl": ""
-    },
-    {
-      "year": "2026",
+      "materialsUrl": "",
       "selected": true,
-      "citation": "Miske, O., Abatayo, A. L., Daley, M., ... Adamkovič, M., ... & Errington, T. M. (2026). Investigating the reproducibility of the social and behavioural sciences. Nature, 652(8108), 126–134. doi:10.1038/s41586-026-10203-5.",
-      "paperUrl": "",
-      "materialsUrl": ""
+      "score": true
     },
     {
       "year": "2026",
-      "citation": "Adamkovič, M. & Lačný, M. (2026). Poverty in Social Science Research: Different Operationalizations, Different Results. Human Affairs, 36(3), 407-429. doi:10.1515/humaff-2025-0045.",
+      "citation": "Miske, O., Abatayo, A. L., Daley, M., ... Adamkovič, M., ... & Errington, T. M. (2026). Investigating the reproducibility of the social and behavioural sciences. Nature, 652(8108), 126–134. doi: 10.1038/s41586-026-10203-5.",
+      "title": "Investigating the reproducibility of the social and behavioural sciences",
+      "venue": "Nature",
       "paperUrl": "",
-      "materialsUrl": ""
-    },
-    {
-      "year": "2026",
+      "materialsUrl": "",
       "selected": true,
+      "score": true
+    },
+    {
+      "year": "2026",
+      "citation": "Adamkovič, M. & Lačný, M. (2026). Poverty in Social Science Research: Different Operationalizations, Different Results. Human Affairs, 36(3), 407-429. doi: 10.1515/humaff-2025-0045.",
+      "paperUrl": "",
+      "materialsUrl": ""
+    },
+    {
+      "year": "2026",
       "citation": "Adamkovič, M., Jin, Y., Martončik, M., & Karhulahti, V.-M. (2026). Confusion in gaming disorder measurement. Royal Society Open Science, 13(1). doi:10.1098/rsos.251452.",
+      "title": "Confusion in gaming disorder measurement",
+      "venue": "Royal Society Open Science",
       "paperUrl": "",
-      "materialsUrl": ""
+      "materialsUrl": "",
+      "selected": true
     },
     {
       "year": "2025",
@@ -279,10 +415,12 @@ window.siteContent = {
     },
     {
       "year": "2025",
-      "selected": true,
       "citation": "Adamkovič, M., Simsa, B., Jozefiaková, B., ... Ropovik, I. (2025). Complex temporal dynamics of mental health indicators: A longitudinal network approach perspective. Psychological Medicine, 55(e295), e295. doi:10.1017/S0033291725102080.",
+      "title": "Complex temporal dynamics of mental health indicators: A longitudinal network approach perspective",
+      "venue": "Psychological Medicine",
       "paperUrl": "",
-      "materialsUrl": ""
+      "materialsUrl": "",
+      "selected": true
     },
     {
       "year": "2025",
@@ -310,13 +448,13 @@ window.siteContent = {
     },
     {
       "year": "2025",
-      "citation": "Phills, C. E., Miller, J. K., Buchanan, E. M., … Adamkovic, M. … Kekecs, Z. (2025). Multi-region investigation of \"man\" as default in attitudes. PloS One, 20(6), e0323938. https://doi.org/10.1371/journal.pone.0323938.",
+      "citation": "Phills, C. E., Miller, J. K., Buchanan, E. M., … Adamkovic, M. … Kekecs, Z. (2025). Multi-region investigation of “man” as default in attitudes. PloS One, 20(6), e0323938. https://doi.org/10.1371/journal.pone.0323938.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
       "year": "2025",
-      "citation": "Chen, S.-C., Buchanan, E. M., Kekecs, Z., Miller, J. K., Szabelska, A., Aczel, B., … Chartier, C. R. (2025). Investigating object orientation effects across 18 languages. Current Psychology, 44(24), 19148–19174. doi:10.1007/s12144-025-08304-x.",
+      "citation": "Chen, S.-C., Buchanan, E. M., Kekecs, Z., Miller, J. K., Szabelska, A., Aczel, B., Bernabeu, P., Forscher, P., Szuts, A., Vally, Z., Al-Hoorie, A. H., Helmy, M., da Silva, C. S. A., da Silva, L. O., de Moraes, Y. L., Hsu, R. M. C. S., Mafra, A. L., Valentova, J. V., Varella, M. A. C., … Chartier, C. R. (2025). Investigating object orientation effects across 18 languages. Current Psychology. 44(24), 19148–19174. doi:10.1007/s12144-025-08304-x.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -334,7 +472,7 @@ window.siteContent = {
     },
     {
       "year": "2024",
-      "citation": "Boelen, P. A., & Adamkovič, M. (2024). Prevalence and correlates of ICD-11-based prolonged grief disorder in a representative Slovakian sample of recently bereaved adults. European Journal of Psychotraumatology, 15(1). doi:10.1080/20008066.2024.2381368.",
+      "citation": "Boelen, P. A., & Adamkovič, M. (2024). Prevalence and correlates of ICD-11-based prolonged grief disorder in a representative Slovakian sample of recently bereaved adults. European Journal of Psychotraumatology, 15(1).",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -346,7 +484,7 @@ window.siteContent = {
     },
     {
       "year": "2024",
-      "citation": "Martončik, M., Adamkovič, M., & Ropovik, I. (2024). Network analysis of additional clinical features of (internet) gaming disorder. International Journal of Methods in Psychiatric Research. doi:10.1002/mpr.2021.",
+      "citation": "Martončik, M., Adamkovič, M., & Ropovik, I. & (2024). Network analysis of additional clinical features of (internet) gaming disorder. International Journal of Methods in Psychiatric Research. doi:10.1002/mpr.2021.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -388,7 +526,7 @@ window.siteContent = {
     },
     {
       "year": "2023",
-      "citation": "Buchanan, E. M., Lewis, S. C., Paris, B., … Adamkovič, M. … Primbs, M. (2023). The Psychological Science Accelerator's COVID-19 rapid-response dataset. Scientific Data. doi:10.1038/s41597-022-01811-7.",
+      "citation": "Buchanan, E. M., Lewis, S. C., Paris, B., … Adamkovič, M. … Primbs, M. (2023). The Psychological Science Accelerator’s COVID-19 rapid-response dataset. Scientific Data. doi:10.1038/s41597-022-01811-7.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -400,13 +538,13 @@ window.siteContent = {
     },
     {
       "year": "2023",
-      "citation": "Fedáková, D., Adamkovič, M., Loziak, A., & Kačmár, P. (2023). Modeling the Effect of Psycho-Socio-Economic Consequences of COVID-19 on Life Satisfaction: The Role of Deviation from a Balanced Time Perspective. Timing & Time Perception. doi:10.1163/22134468-bja10076.",
+      "citation": "Fedáková, D., Adamkovič, M., Loziak, A., & Kačmár, P. (2023). Modeling the Effect of Psycho-Socio-Economic Consequences of COVID-19 on Life Satisfaction: The Role of Deviation from a Balanced Time Perspective. doi:10.1163/22134468-bja10076. Timing & Time Perception.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
       "year": "2023",
-      "citation": "Grossmann, I., Rottela, A., Hutcherson, C., … Adamkovič, M., ... Wilkening, T. (2023). Insights into accuracy of social scientists' forecasts of societal change. Nature Human Behaviour. doi:10.1038/s41562-022-01517-1.",
+      "citation": "Grossmann, I., Rottela, A., Hutcherson, C., … Adamkovič, M., ... Wilkening, T. (2023) Insights into accuracy of social scientists' forecasts of societal change. Nature Human Behaviour. doi:10.1038/s41562-022-01517-1.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -424,13 +562,13 @@ window.siteContent = {
     },
     {
       "year": "2022",
-      "citation": "Hajdu, N., Schmidt, K., Acs, G., … Adamkovič, M., ... Szaszi, B. (2022). Contextual factors predicting compliance behavior during the COVID-19 pandemic: A machine learning analysis on survey data from 16 countries. PLOS ONE. doi:10.1371/journal.pone.0276970.",
+      "citation": "Hajdu, N., Schmidt, K., Acs, G., … Adamkovič, M., ... Szaszi, B. (2022). Contextual factors predicting compliance behavior during the COVID-19 pandemic: A machine learning analysis on survey data from 16 countries. PLOS ONE; doi:10.1371/journal.pone.0276970.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
       "year": "2022",
-      "citation": "Vargová, L., Mikulášková, G., Fedáková, D., ... Adamkovič, M. (2022). Slovak parents' mental health and socioeconomic changes during the COVID-19 pandemic. Frontiers in Psychiatry. doi:10.3389/fpsyt.2022.934293.",
+      "citation": "Vargová, L., Mikulášková, G., Fedáková, D., ... Adamkovič, M. (2022). Slovak parents’ mental health and socioeconomic changes during the COVID-19 pandemic. Frontiers in Psychiatry. doi:10.3389/fpsyt.2022.934293.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -442,7 +580,7 @@ window.siteContent = {
     },
     {
       "year": "2022",
-      "citation": "Jozefiaková, B., Kaščáková, N., Adamkovič, M., Hašto, J., & Tavel, P. (2022). Posttraumatic Growth and Its Measurement: A Closer Look at the PTGI's Psychometric Properties and Structure. Frontiers in Psychology. doi:10.3389/fpsyg.2022.801812.",
+      "citation": "Jozefiaková, B., Kaščáková, N., Adamkovič, M., Hašto, J., & Tavel, P. (2022). Posttraumatic Growth and Its Measurement: A Closer Look at the PTGI’s Psychometric Properties and Structure. Frontiers in Psychology. doi:10.3389/fpsyg.2022.801812.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -460,7 +598,7 @@ window.siteContent = {
     },
     {
       "year": "2022",
-      "citation": "Delios, A., Clemente, E. C., Wu, T., ... Generalizability Tests Forecasting Collaboration, ... Uhlmann, E. (2022). Examining the generalizability of research findings from archival data. PNAS. doi:10.1073/pnas.2120377119.",
+      "citation": "Delios, A., Clemente, E. C., Wu, T., ... Generalizability Tests Forecasting Collaboration, ... Uhlmann, E. (2022). Examining the generalizability of research findings from archival data. PNAS. doi:10.1073/pnas.2120377119 [Member of Generalizability Tests Forecasting Collaboration].",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -496,7 +634,7 @@ window.siteContent = {
     },
     {
       "year": "2021",
-      "citation": "Wang, K., Goldenberg, A., Dorison, C. A., … Adamkovič, M., … Moshontz, H. (2021). A multi-country test of brief reappraisal interventions on emotions during the COVID-19 pandemic. Nature Human Behaviour. doi:10.1038/s41562-021-01173-x.",
+      "citation": "Wang, K., Goldenberg, A., Dorison, C. A., … Adamkovič, M.., … Moshontz, H. (2021). A multi-country test of brief reappraisal interventions on emotions during the COVID-19 pandemic. Nature Human Behaviour, doi:10.1038/s41562-021-01173-x.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -508,7 +646,7 @@ window.siteContent = {
     },
     {
       "year": "2021",
-      "citation": "Ropovik, I., Adamkovič, M., & Baník, G. (2021). Duševné zdravie ako komplexný dynamický systém: sieťový prístup k psychopatológii. [Mental health as a complex dynamic system: A network approach to psychopathology] Československá psychologie, 65(1), 31–45. doi:10.51561/cspsych.65.1.31.",
+      "citation": "Ropovik, I., Adamkovič, M., & Baník, G. (2021). Duševné zdravie ako komplexný dynamický systém: sieťový prístup k psychopatológii. [Mental health as a complex dynamic system: A network approach to psychopatology] Ceskoslovenska Psychologie, 65(1), 31–45. doi:10.51561/cspsych.65.1.31.",
       "paperUrl": "",
       "materialsUrl": ""
     },
@@ -520,55 +658,55 @@ window.siteContent = {
     },
     {
       "year": "2021",
-      "citation": "Tierney, W., Hardy, J., III, Ebersole, C. R., Viganola, D., Culture & Work Morality Forecasting Collaboration, … Uhlmann, E. L. (2021). A creative destruction approach to replication: Implicit work and sex morality across cultures. Journal of Experimental Social Psychology, 93(104060), 104060. https://doi.org/10.1016/j.jesp.2020.104060.",
+      "citation": "Tierney, W., Hardy, J., III, Ebersole, C. R., Viganola, D., Culture & Work Morality Forecasting Collaboration, … Uhlmann, E. L. (2021). A creative destruction approach to replication: Implicit work and sex morality across cultures. Journal of Experimental Social Psychology, 93(104060), 104060. https://doi.org/10.1016/j.jesp.2020.104060 [Member of Culture & Work Morality Forecasting Collaboration].",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
-      "citation": "Tierney, W., Hardy, J. H., III, Ebersole, C. R., ... Hiring Decisions Forecasting Collaboration, ... Uhlmann, E. L. (2020). Creative destruction in science. Organizational Behavior and Human Decision Processes, 161, 291–309. doi:10.1016/j.obhdp.2020.07.002.",
+      "year": "2020",
+      "citation": "Tierney, W., Hardy, J. H., III, Ebersole, C. R., ... Hiring Decisions Forecasting Collaboration, ... Uhlmann, E. L. (2020). Creative destruction in science. Organizational Behavior and Human Decision Processes, 161, 291–309. doi:10.1016/j.obhdp.2020.07.002 [Member of Hiring Decisions Forecasting Collaboration].",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
+      "year": "2020",
       "citation": "Gurková, E., Adamkovič, M., Jones, T., Kurucová, R., Kalánková, D., & Žiaková, K. (2020). Factor analysis, validity of the perceived implicit rationing of nursing care instrument and prevalence and patterns of unfinished nursing care in Slovakia. Journal of Nursing Management, 28(8), 2036–2047. https://doi.org/10.1111/jonm.12887.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
-      "citation": "Landy, J. F., Jia, M. L., Ding, I. L., ... The Crowdsourcing Hypothesis Tests Collaboration, ... Uhlmann, E. L. (2020). Crowdsourcing hypothesis tests: Making transparent how design choices shape research results. Psychological Bulletin, 146(5), 451–479. https://doi.org/10.1037/bul0000220.",
+      "year": "2020",
+      "citation": "Landy, J. F., Jia, M. L., Ding, I. L., ...The Crowdsourcing Hypothesis Tests Collaboration, ... Uhlmann, E. L. (2020). Crowdsourcing hypothesis tests: Making transparent how design choices shape research results. Psychological Bulletin, 146(5), 451–479. https://doi.org/10.1037/bul0000220 [Member of The Crowdsourcing Hypothesis Tests Collaboration].",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
+      "year": "2020",
       "citation": "Adamkovič, M. (2020). Consequences of poverty on economic decision-making: Assessing the verisimilitude of the cognitive mechanism. Frontiers in Psychology, 11, 171. https://doi.org/10.3389/fpsyg.2020.00171.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
-      "citation": "Kačmár, P. & Adamkovič, M. (2020). Replikačné štúdie v psychológii: Pojednanie o dvoch dôležitých otázkach [Replication studies in psychology: A discourse on two important issues]. Československá psychologie, 64(1), 66-83.",
+      "year": "2020",
+      "citation": "Kačmár, P. & Adamkovič, M. (2020). Replikačné štúdie v psychológii: Pojednanie o dvoch dôležitých otázkach [Replication studies in psychology: A discourse on two important issues]. Československá psychologie, 64(1), 66-83.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
+      "year": "2019",
       "citation": "Adamkovič, M. (2019). Objective poverty and willingness to delay gratification: Do different poverty thresholds and cognitive load matter? Československá psychologie, 64(Supplement 1), 2-14.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
+      "year": "2017",
       "citation": "Adamkovič, M., & Martončik, M. (2017). A Review of Consequences of Poverty on Economic Decision-Making: A Hypothesized Model of a Cognitive Mechanism. Frontiers in Psychology, 8. https://doi.org/10.3389/fpsyg.2017.01784.",
       "paperUrl": "",
       "materialsUrl": ""
     },
     {
-      "year": "2020 and older",
-      "citation": "Brestovanský, M., Kusý, P., & Adamkovič, M. (2016). Factor analysis of the Test of prosocial moral reasoning in 11-12 years old students. Československá psychologie, 60(5), 455-467.",
+      "year": "2016",
+      "citation": "Brestovanský, M., Kusý, P., & Adamkovič, M. (2016). Factor analysis of the Test of prosocial moral reasoning in 11-12 years old students. Československá psychologie, 60(5), 455-467.",
       "paperUrl": "",
       "materialsUrl": ""
     }
