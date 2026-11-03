@@ -69,10 +69,15 @@ const publicationMarkup = (item, compact = false) => {
     .replace(/(?:doi:\s*|https?:\/\/(?:dx\.)?doi\.org\/)10\.\S+/gi, "")
     .trim();
   const formatted = escapeHtml(citation).replace(/Adamkovi[čc], M\./g, "<strong>$&</strong>");
+  const topics = (item.topics || []).map((id) => content.publicationTopics.find((topic) => topic.id === id)).filter(Boolean);
   return `<article class="list-item publication">
-    <div class="item-meta"><span class="date">${escapeHtml(item.year)}</span>${item.score ? '<span class="badge">SCORE</span>' : ""}</div>
+    <div class="item-meta"><span class="date">${escapeHtml(item.year)}</span>
+      ${item.score ? `<a class="badge" href="${escapeHtml(content.scoreUrl)}"${linkAttrs(content.scoreUrl)} title="Systematizing Confidence in Open Research and Evidence">SCORE</a>` : ""}
+      ${item.psa ? `<a class="badge" href="${escapeHtml(content.psaUrl)}"${linkAttrs(content.psaUrl)} title="Psychological Science Accelerator">PSA</a>` : ""}
+    </div>
     ${compact && item.title ? `<h3>${escapeHtml(item.title)}</h3><p class="venue">${escapeHtml(item.venue)}</p>` : `<p>${formatted}</p>`}
     ${publicationLinks(item)}
+    ${!compact && topics.length ? `<ul class="paper-topics" aria-label="Topics">${topics.map((topic) => `<li>${escapeHtml(topic.label)}</li>`).join("")}</ul>` : ""}
   </article>`;
 };
 
@@ -100,13 +105,14 @@ const renderTimeline = (selector, items = []) => render(selector, items.map((ite
     ${item.note ? `<p class="note">${escapeHtml(item.note)}</p>` : ""}
   </article>`).join(""));
 
-["name", "role", "bio", "researchSummary", "scoreText", "updated"].forEach((field) => {
+["name", "role", "bio", "researchSummary", "scoreText", "interestsText", "updated"].forEach((field) => {
   setText(`[data-field="${field}"]`, content[field]);
 });
 setText("[data-footer]", `© ${new Date().getFullYear()} ${content.name}`);
 document.querySelectorAll("[data-cv-download]").forEach((node) => {
   node.setAttribute("href", content.cvFile);
 });
+document.querySelectorAll("[data-score-project]").forEach((node) => node.setAttribute("href", content.scoreUrl));
 
 const page = document.body.dataset.page;
 if (page === "home") {
@@ -119,10 +125,9 @@ if (page === "research") {
   renderPlainList("[data-research-areas]", content.researchAreas);
   renderTimeline("[data-research-appointments]", content.researchAppointments);
   renderTimeline("[data-previous-appointments]", content.previousAppointments);
-  renderTimeline("[data-teaching]", content.teaching);
+  renderTimeline("[data-talks]", content.talks);
   renderTimeline("[data-supervision]", content.supervision);
   renderTimeline("[data-education]", content.education);
-  renderPlainList("[data-service]", content.service);
   renderPlainList("[data-collaborations]", content.collaborations);
   renderPlainList("[data-awards]", content.awards);
 }
@@ -135,31 +140,23 @@ if (page === "projects") {
   }
 }
 if (page === "publications") {
-  const search = document.querySelector("[data-publication-search]");
-  const yearSelect = document.querySelector("[data-publication-year]");
+  const topicSelect = document.querySelector("[data-publication-topic]");
   render("[data-publication-toc]", publicationYears.map((year) => `<a href="#${yearSlug(year)}">${escapeHtml(year)}</a>`).join(""));
-  yearSelect.innerHTML += publicationYears.map((year) => `<option value="${escapeHtml(year)}">${escapeHtml(year)}</option>`).join("");
-  const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  topicSelect.innerHTML += content.publicationTopics.map((topic) => `<option value="${escapeHtml(topic.id)}">${escapeHtml(topic.label)}</option>`).join("");
   const updateResults = () => {
-    const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
-    const results = content.publications.filter((item) => {
-      const text = normalize(`${item.citation} ${item.year} ${item.score ? "SCORE" : ""}`);
-      return (!yearSelect.value || item.year === yearSelect.value) && terms.every((term) => text.includes(term));
-    });
+    const results = content.publications.filter((item) => !topicSelect.value || (item.topics || []).includes(topicSelect.value));
     renderGroupedPublications(results);
-    setText("[data-search-status]", `${results.length} publications found`);
+    setText("[data-topic-status]", `${results.length} publications in this topic`);
   };
-  search.addEventListener("input", updateResults);
-  yearSelect.addEventListener("change", updateResults);
+  topicSelect.addEventListener("change", updateResults);
   document.querySelector("[data-publication-toc]").addEventListener("click", (event) => {
     if (!event.target.closest("a")) return;
-    search.value = "";
-    yearSelect.value = "";
+    topicSelect.value = "";
     updateResults();
   });
   updateResults();
 }
 if (page === "contact") {
-  renderLinks("[data-contact]", content.contact);
+  render("[data-contact]", content.contact.map((item) => `<span>${escapeHtml(item.label)}</span>`).join(""));
   renderLinks("[data-profile-links]", content.profileLinks);
 }

@@ -4,10 +4,10 @@ A simple static personal website designed for GitHub Pages.
 
 ## Pages
 
-- `index.html` — bio, selected publications (including SCORE), and selected projects
-- `research.html` — research, teaching, supervision, education, service, and CV download
+- `index.html` — bio, some recent publications (including SCORE), and selected projects
+- `research.html` — research, selected talks, supervision, education, collaborations, and CV download
 - `projects.html` — projects and grants (ongoing / upcoming / finished)
-- `publications.html` — full publication list, searchable by author/title/keyword and year
+- `publications.html` — full publication list, with overlapping topics and year navigation
 - `contact.html` — email and profile links
 
 ## Edit the site text
@@ -32,8 +32,15 @@ Things worth knowing:
   such as your phone number and date of birth before publishing a replacement.
 - **SCORE**: set `"score": true` on its three papers; selected SCORE papers are
   grouped together on the overview and marked in the full list.
-- **Academic profile**: edit `researchAppointments`, `teaching`, `supervision`,
-  `education`, `service`, `collaborations`, and `awards` in the same content file.
+- **PSA**: set `"psa": true` on Psychological Science Accelerator papers.
+- **Topics**: each paper has a `topics` array of IDs, for example
+  `"topics": ["gaming", "measurement", "networks"]`. A paper can belong to several
+  topics without duplicating its record. Edit the labels in `publicationTopics`.
+- **Academic profile**: edit `researchAppointments`, `interestsText`, `talks`,
+  `supervision`, `education`, `collaborations`, and `awards` in the same content file.
+- **Contact**: the address is plain text with `[[at]]`, without a mailto link.
+  The public CV uses the same notation. This discourages simple scrapers but is
+  not a guarantee against sophisticated bots or copies of earlier versions.
 - **Updated date**: change the `updated` field when refreshing the content.
 
 Keep publication years as four-digit strings (for example `"2026"`), or use
@@ -48,6 +55,7 @@ Example publication (replace the text and leave unused links empty):
   "citation": "Authors. (2026). Paper title. Journal. doi:10.xxxx/example.",
   "paperUrl": "",
   "materialsUrl": "https://osf.io/your-project/",
+  "topics": ["meta-research", "measurement"],
   "selected": true
 }
 ```
@@ -60,6 +68,14 @@ then publishes it through the included workflow. Refresh the browser after editi
 
 Run `node --test tests/site.test.cjs` for the dependency-free content and rendering
 checks. The site has no installation or build step.
+
+## Topic categories
+
+The initial categories used an exploratory TF-IDF + NMF model of the 65 paper
+titles (8 components, scikit-learn 1.9.1, seed 42). The final nine reader-facing
+categories and overlapping assignments were manually reviewed. They are thematic
+navigation labels, not a full-text or abstract-based classification.
+Method and source notes are in `docs/publication-topics.md`.
 
 ## Update the portrait
 

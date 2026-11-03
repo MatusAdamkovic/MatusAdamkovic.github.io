@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Research appointments, teaching, supervision, and academic CV of Matúš Adamkovič.">
+    <meta name="description" content="Research appointments, selected talks, supervision, and academic CV of Matúš Adamkovič.">
     <meta name="theme-color" content="#ffffff">
-    <title>Research & teaching · Matúš Adamkovič</title>
+    <title>Research · Matúš Adamkovič</title>
     <link rel="icon" href="assets/profile.png">
-    <link rel="stylesheet" href="styles.css?v=20261103.3">
+    <link rel="stylesheet" href="styles.css?v=20261103.4">
   </head>
   <body data-page="research">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -26,16 +26,19 @@
     <main id="main" tabindex="-1">
       <section class="page-hero" aria-labelledby="page-title">
         <p class="kicker">Academic profile</p>
-        <h1 id="page-title">Research &amp; teaching</h1>
+        <h1 id="page-title">Research</h1>
         <p class="lead" data-field="researchSummary"></p>
         <div class="actions"><a data-cv-download href="assets/adamkovic_academic_cv.pdf" download="Adamkovic_academic_CV.pdf">Download CV (PDF)</a><span class="date" data-field="updated"></span></div>
         <nav class="jump-links" aria-label="Academic profile sections">
-          <a href="#appointments">Research</a><a href="#teaching">Teaching</a><a href="#supervision">Supervision</a><a href="#education">Education</a><a href="#service">Service</a>
+          <a href="#appointments">Appointments</a><a href="#talks">Talks</a><a href="#supervision">Supervision</a><a href="#education">Education</a><a href="#collaborations">Collaborations</a>
         </nav>
       </section>
       <section class="section-grid" aria-labelledby="interests-title">
         <div class="section-heading"><h2 id="interests-title">Research interests</h2></div>
-        <ul class="tag-list section-body" data-research-areas></ul>
+        <div class="section-body">
+          <p data-field="interestsText"></p>
+          <ul class="tag-list" data-research-areas></ul>
+        </div>
       </section>
       <section class="section-grid" id="appointments" aria-labelledby="appointments-title">
         <div class="section-heading"><h2 id="appointments-title">Research appointments</h2></div>
@@ -44,9 +47,9 @@
           <details><summary>Previous appointments</summary><div class="timeline" data-previous-appointments></div></details>
         </div>
       </section>
-      <section class="section-grid" id="teaching" aria-labelledby="teaching-title">
-        <div class="section-heading"><h2 id="teaching-title">Teaching</h2></div>
-        <div class="section-body timeline" data-teaching></div>
+      <section class="section-grid" id="talks" aria-labelledby="talks-title">
+        <div class="section-heading"><h2 id="talks-title">Selected talks</h2></div>
+        <div class="section-body timeline" data-talks></div>
       </section>
       <section class="section-grid" id="supervision" aria-labelledby="supervision-title">
         <div class="section-heading"><h2 id="supervision-title">PhD supervision</h2></div>
@@ -56,13 +59,9 @@
         <div class="section-heading"><h2 id="education-title">Education</h2></div>
         <div class="section-body timeline" data-education></div>
       </section>
-      <section class="section-grid" id="service" aria-labelledby="service-title">
-        <div class="section-heading"><h2 id="service-title">Service &amp; collaborations</h2></div>
-        <div class="section-body">
-          <ul class="plain-list" data-service></ul>
-          <h3 class="subsection-title">International collaborations</h3>
-          <ul class="plain-list" data-collaborations></ul>
-        </div>
+      <section class="section-grid" id="collaborations" aria-labelledby="collaborations-title">
+        <div class="section-heading"><h2 id="collaborations-title">Selected international collaborations</h2></div>
+        <ul class="section-body plain-list" data-collaborations></ul>
       </section>
       <section class="section-grid" aria-labelledby="awards-title">
         <div class="section-heading"><h2 id="awards-title">Selected awards</h2></div>
@@ -74,7 +73,7 @@
       <span>Updated <span data-field="updated">November 2026</span></span>
       <a href="#main">Back to top</a>
     </footer>
-    <script src="content/site-content.js?v=20261103.3"></script>
-    <script src="script.js?v=20261103.3"></script>
+    <script src="content/site-content.js?v=20261103.4"></script>
+    <script src="script.js?v=20261103.4"></script>
   </body>
 </html>

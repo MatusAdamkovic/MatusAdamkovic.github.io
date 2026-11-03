@@ -46,7 +46,7 @@ test("November CV publications are complete, unique, and free of impact factors"
 
 test("overview uses a separate SCORE group and compact selected publications", () => {
   const { node } = loadPage("home");
-  assert.equal((node("[data-score-publications]").innerHTML.match(/class="badge">SCORE/g) || []).length, 3);
+  assert.equal((node("[data-score-publications]").innerHTML.match(/>SCORE<\/a>/g) || []).length, 3);
   assert.match(node("[data-overview-publications]").innerHTML, /<h3>Confusion in gaming disorder measurement<\/h3>/);
   assert.doesNotMatch(node("[data-overview-publications]").innerHTML, /semantic priming/i);
 });
@@ -57,7 +57,7 @@ test("future and ongoing grants are not mixed with finished projects", () => {
   assert.match(node("[data-upcoming-projects]").innerHTML, /GAČR Junior Star/);
   assert.doesNotMatch(node("[data-ongoing-projects]").innerHTML, /GAČR Junior Star/);
   assert.match(node("[data-ongoing-projects]").innerHTML, /APVV-25-0711/);
-  assert.equal(content.projects.filter((p) => p.status === "finished").length, 10);
+  assert.equal(content.projects.filter((p) => p.status === "finished").length, 11);
 });
 
 test("all publications render once, with valid year links", () => {
@@ -68,42 +68,42 @@ test("all publications render once, with valid year links", () => {
   assert.match(node("[data-publication-toc]").innerHTML, /href="#y-2026"/);
 });
 
-test("search supports SCORE, multiple keywords, and unaccented names", () => {
-  const { node } = loadPage("publications");
-  const search = node("[data-publication-search]");
-  search.value = "SCORE";
-  search.listeners.input();
-  assert.equal((node("[data-all-publications]").innerHTML.match(/class="list-item publication"/g) || []).length, 3);
-  search.value = "adamkovic confusion";
-  search.listeners.input();
-  assert.match(node("[data-all-publications]").innerHTML, /Confusion in gaming disorder measurement/);
-  assert.equal((node("[data-all-publications]").innerHTML.match(/class="list-item publication"/g) || []).length, 1);
+test("all papers have reviewed, valid, overlapping topic categories", () => {
+  const { content } = loadPage("publications");
+  const ids = new Set(content.publicationTopics.map((topic) => topic.id));
+  assert.equal(ids.size, 9);
+  for (const paper of content.publications) {
+    assert.ok(paper.topics.length);
+    assert.equal(new Set(paper.topics).size, paper.topics.length);
+    paper.topics.forEach((topic) => assert.ok(ids.has(topic)));
+  }
+  assert.ok(content.publications.some((paper) => paper.topics.length > 1));
 });
 
-test("year filtering, empty results, and clearing the search work", () => {
-  const { node } = loadPage("publications");
-  const search = node("[data-publication-search]");
-  const year = node("[data-publication-year]");
-  year.value = "2026";
-  year.listeners.change();
-  assert.equal((node("[data-all-publications]").innerHTML.match(/class="list-item publication"/g) || []).length, 12);
-  search.value = "no-matching-publication-xyz";
-  search.listeners.input();
+test("topic filtering, empty results, and returning to all topics work", () => {
+  const { node, content } = loadPage("publications");
+  const topic = node("[data-publication-topic]");
+  for (const category of content.publicationTopics) {
+    topic.value = category.id;
+    topic.listeners.change();
+    const expected = content.publications.filter((p) => p.topics.includes(category.id)).length;
+    assert.equal((node("[data-all-publications]").innerHTML.match(/class="list-item publication"/g) || []).length, expected);
+  }
+  topic.value = "nonexistent-topic";
+  topic.listeners.change();
   assert.equal(node("[data-no-results]").hidden, false);
-  assert.match(node("[data-publication-toc]").innerHTML, /href="#y-2026"/);
-  search.value = "";
-  year.value = "";
-  search.listeners.input();
+  topic.value = "";
+  topic.listeners.change();
   assert.equal(node("[data-no-results]").hidden, true);
   assert.equal((node("[data-all-publications]").innerHTML.match(/class="list-item publication"/g) || []).length, 65);
 });
 
 test("year shortcuts restore the full list before navigating", () => {
   const { node } = loadPage("publications");
-  node("[data-publication-search]").value = "SCORE";
-  node("[data-publication-search]").listeners.input();
+  node("[data-publication-topic]").value = "gaming";
+  node("[data-publication-topic]").listeners.change();
   node("[data-publication-toc]").listeners.click({ target: { closest: () => ({}) } });
-  assert.equal(node("[data-publication-search]").value, "");
+  assert.equal(node("[data-publication-topic]").value, "");
   assert.equal((node("[data-all-publications]").innerHTML.match(/class="list-item publication"/g) || []).length, 65);
 });
 
@@ -117,9 +117,10 @@ test("paper DOI links and optional custom links are rendered safely", () => {
   assert.equal(vm.runInContext('escapeHtml("<script>")', context), "&lt;script&gt;");
 });
 
-test("research profile includes new teaching and complete Jyväskylä affiliation", () => {
+test("research profile includes talks and complete Jyväskylä affiliation", () => {
   const { node } = loadPage("research");
-  assert.match(node("[data-teaching]").innerHTML, /Metropolitan University, Prague/);
+  assert.match(node("[data-talks]").innerHTML, /Leveraging Large Language Models/);
+  assert.match(node("[data-collaborations]").innerHTML, /International Trauma Consortium/);
   assert.match(node("[data-research-appointments]").innerHTML, /Faculty of Humanities and Social Sciences/);
   assert.doesNotMatch(node("[data-research-areas]").innerHTML, /methodology of behavioral research/);
 });
@@ -136,11 +137,43 @@ test("all page shells have accessible navigation, a main target, and existing as
   }
 });
 
-test("only the Contact page renders an email link", () => {
+test("only Contact renders an obfuscated email address, without a mailto link", () => {
   for (const page of ["home", "research", "projects", "publications"]) {
     const { node } = loadPage(page);
     assert.equal(node("[data-contact]").innerHTML, "");
   }
   const { node } = loadPage("contact");
-  assert.match(node("[data-contact]").innerHTML, /mailto:matho.adamkovic@gmail.com/);
+  assert.match(node("[data-contact]").innerHTML, /matho\.adamkovic \[\[at\]\] gmail\.com/);
+  assert.doesNotMatch(node("[data-contact]").innerHTML, /mailto:/);
+  assert.doesNotMatch(contentSource, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+});
+
+test("accepted reports use the supplied recommendation links", () => {
+  const { content } = loadPage("publications");
+  assert.deepEqual(Array.from(content.publications.slice(0, 3), (p) => p.paperUrl), [
+    "https://rr.peercommunityin.org/articles/rec?id=604",
+    "https://rr.peercommunityin.org/articles/rec?id=322",
+    "https://rr.peercommunityin.org/articles/rec?id=778"
+  ]);
+});
+
+test("PSA is labelled separately from SCORE", () => {
+  const { content, node } = loadPage("publications");
+  assert.equal(content.publications.filter((p) => p.psa).length, 9);
+  assert.equal((node("[data-all-publications]").innerHTML.match(/>PSA<\/a>/g) || []).length, 9);
+  assert.equal(content.publications.filter((p) => p.score && p.psa).length, 0);
+});
+
+test("finished APVV is absent from ongoing and selected projects", () => {
+  const { node, content } = loadPage("projects");
+  assert.match(node("[data-finished-projects]").innerHTML, /APVV-22-0458/);
+  assert.doesNotMatch(node("[data-ongoing-projects]").innerHTML, /APVV-22-0458/);
+  assert.equal(content.projects.find((p) => p.label.startsWith("APVV-22-0458")).selected, false);
+});
+
+test("removed publication and profile controls are absent", () => {
+  const publications = fs.readFileSync(path.join(root, "publications.html"), "utf8");
+  const research = fs.readFileSync(path.join(root, "research.html"), "utf8");
+  assert.doesNotMatch(publications, /type="search"|data-publication-year/);
+  assert.doesNotMatch(research, /data-teaching|data-service/);
 });
